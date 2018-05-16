@@ -5,7 +5,6 @@ function toggleTabs() {
 
   $('.tab-title').each(function(index, title) {
     if ($(title).attr('id') === tabNumber) {
-
       if ($( window ).width() < 700) {
         $(title).toggleClass('active-title')
         toggleSpan(title)
@@ -35,7 +34,11 @@ function toggleSpan(tab) {
 
   $('.tab-title').each(function(index, title) {
     if ($(title).attr('id') === tabNumber) {
-      $(title).children('span').text('-')
+      if ($(title).hasClass('active-title')) {
+        $(title).children('span').text('-')
+      } else {
+        $(title).children('span').text('+')
+      }
     } else {
       $(title).children('span').text('+')
     }

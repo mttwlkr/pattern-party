@@ -43,14 +43,18 @@ header h1 span {
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
+.content-container {
+  margin: 0 3em;
+  margin-top: 50px;
+}
+
 p {
   line-height: 1.7;
 }
 
+
 #accordion {
   background: #F2F2F2;
-  margin: 0 3em;
-  margin-top: 50px;
 }
 
 .tab-title-div {
@@ -150,6 +154,13 @@ p {
   text-decoration: none;
 }
 
+@media (min-width: 1400px) {
+    
+  .content-container {
+    margin: 0em 10em;
+  }
+}
+
 @media (max-width: 700px) {
   
   header {
@@ -160,7 +171,6 @@ p {
 
   #accordion {
     border: 1px solid #666666;
-    margin-top: 50px;
   }
 
   .tab-title-div {
@@ -223,6 +233,86 @@ p {
 
   #style-header-hr {
     margin-bottom: 1em;
+  }
+}
+
+/*FLEX CARDS*/
+
+#flex-card-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 0em 2em;
+}
+
+.flex-card-article {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 29%;
+  margin: 1em;
+}
+
+#flex-card-1,
+#flex-card-7 {
+  flex-grow: 2;
+  flex-basis: 61%;
+}
+
+.flex-card-title-div {
+  height: 25%;
+  font-weight: 800;
+  padding-left: 1em;
+  display: flex;
+  align-items: center;
+  border: 1px solid #666666;
+}
+
+.flex-card-img-div {
+  height: 75%;
+}
+
+.flex-card-img {
+  height: 100%;
+  width: 100%;
+  max-height: 200px;
+}
+
+@media (min-width: 1400px) {
+    
+  #flex-card-container {
+    margin: 0em 9em;
+  }
+}
+
+@media (max-width: 850px) {
+
+  #flex-card-container {
+    flex-direction: column;
+    margin: 0em 3em;
+  }
+
+  .flex-card-container {
+    width: 100%;
+  }
+
+  .flex-card-article {
+    flex-basis: auto;
+    margin: 1em 0px;
+    min-width: auto;
+  }
+
+  .flex-card-img {
+    height: 100%;
+    width: 100%;
+  }
+
+  #flex-card-1,
+  #flex-card-4,
+  #flex-card-7 {
+    min-width: auto;
+    margin: 10px 0px;
   }
 }
 

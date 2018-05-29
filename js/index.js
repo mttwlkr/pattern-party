@@ -1,4 +1,5 @@
 $('.tab-title').on('click', toggleTabs)
+$('.nav-bar-title-wrapper').on('click', toggleNavBar)
 
 function toggleTabs() {
   const tabNumber = $(this).attr('id');
@@ -44,3 +45,9 @@ function toggleSpan(tab) {
     }
   })
 }
+
+function toggleNavBar() {
+  $('.nav-bar-main').toggleClass('nav-bar-active')
+}
+
+

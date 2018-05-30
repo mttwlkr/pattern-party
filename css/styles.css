@@ -414,9 +414,15 @@ p {
     margin: 3%;
   }
 
+  .nav-bar-input-logo {
+    background-color: #fdfdfd;
+  }
+
   .nav-bar-input {
     width: 100%;
+    background-color: #fdfdfd;
   }
+
 }
 
 #show-code-nav {
